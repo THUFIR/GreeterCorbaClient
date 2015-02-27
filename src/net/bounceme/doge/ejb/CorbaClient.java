@@ -9,8 +9,8 @@ public class CorbaClient {
     public static void main(String[] args) throws NamingException {
         InitialContext context = new InitialContext();
         out.println(context.getEnvironment().toString());
-        NewSessionBeanRemoteRemote remote =  (NewSessionBeanRemoteRemote) context.lookup("net.bounceme.doge.ejb.NewSessionBeanRemoteRemote");
-        out.println(remote.businessMethod());
+        ContactsSessionBeanRemote remote =  (ContactsSessionBeanRemote) context.lookup("net.bounceme.doge.ejb.ContactsSessionBeanRemote");
+        out.println(remote.getAllContacts());
     }
 
 }
